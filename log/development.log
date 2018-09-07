@@ -170,3 +170,19 @@ Started GET "/posts/new" for 207.237.107.209 at 2018-09-07 15:12:28 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 207.237.107.209 at 2018-09-07 15:12:37 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cHnwdWxQShawzzUwzp4HcTANENHSKVtSnpW/uHgs0o5MUsmqoOpdv8aSJEgSCDGBUFdheHLyOI2tD/LLdMTrPw==", "post"=>{"title"=>"test 2", "description"=>"testing second time"}, "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "test 2"], ["description", "testing second time"], ["created_at", "2018-09-07 15:12:37.309992"], ["updated_at", "2018-09-07 15:12:37.309992"]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://67.205.152.27:39274/posts/new
+Completed 302 Found in 25ms (ActiveRecord: 17.3ms)
+
+
+Started GET "/posts/new" for 207.237.107.209 at 2018-09-07 15:12:37 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
